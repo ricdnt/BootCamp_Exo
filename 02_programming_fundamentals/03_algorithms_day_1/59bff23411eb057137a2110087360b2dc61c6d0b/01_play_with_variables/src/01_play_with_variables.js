@@ -1,6 +1,6 @@
 const hello ="Sparta";
 
-currentYear = 2017;
+const currentYear = 2020;
 
 const foo = 12;
 
@@ -12,10 +12,7 @@ const sumResult = foo + bar;
 const prodResult = bar * foo;
 
 // a constant called `promo`, bound to an object with a field `year`, with the value of `currentYear` and with the field `kind`, with the value of `hello`;
-const promo = {
-    year: currentYear,
-    kind: hello
-}
+const promo = {year: currentYear, kind: hello};
 
 // a constant called `promoYear`, bound to the value of the field `year` of the object `promo`;
 const promoYear = promo.year;
