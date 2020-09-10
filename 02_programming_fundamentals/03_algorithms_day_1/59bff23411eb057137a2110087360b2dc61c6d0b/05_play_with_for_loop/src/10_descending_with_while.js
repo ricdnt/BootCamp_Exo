@@ -14,3 +14,11 @@ const litteralDigits = [
   "eight",
   "nine",
 ];
+
+let i = litteralDigits.length;
+
+while (i > 0 ) {
+  i--;
+  console.log(litteralDigits[i]);
+
+}
