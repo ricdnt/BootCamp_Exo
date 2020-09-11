@@ -9,6 +9,10 @@ for (let i = 0; i < literalDigits.length; i++){
   console.log(literalDigits[i]);
 }
 
-// for (const literalDigit of literalDigits) {
+
+/// autre moyen d'écrire une boucle FOR
+/* for (const literalDigit of literalDigits) {
     console.log(literalDigit);
-}
+}*/
+
+
