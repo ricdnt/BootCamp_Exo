@@ -1,24 +1,18 @@
 
+let litersOfCoffee =  0;
 
-
-export let litersOfCoffee = 0;
-
-export const putLitersOfCoffee = (liters) => {
-  litersOfCoffee += liters ;
+export function putLitersOfCoffee (liters) {
+  litersOfCoffee += liters;
   return litersOfCoffee;
 };
 
-
-
-export function consumeLitersOfCoffee (volumeCoffee) {
-  if (litersOfCoffee - volumeCoffee >= 15) {
-    litersOfCoffee -= volumeCoffee ;
+export function consumeLitersOfCoffee (quantityInCentiliters) {
+  if (litersOfCoffee - quantityInCentiliters >= 0) {
+    litersOfCoffee -= quantityInCentiliters;
     return true;
-  } 
-  else {
+  } else {
     return false;
-  };
-}
-
+  }
+};
 
 export default {putLitersOfCoffee, consumeLitersOfCoffee };

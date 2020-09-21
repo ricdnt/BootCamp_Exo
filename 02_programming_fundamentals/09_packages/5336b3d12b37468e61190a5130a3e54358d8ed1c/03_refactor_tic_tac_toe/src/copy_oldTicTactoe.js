@@ -5,7 +5,7 @@ const reader = readline.createInterface({
   output: process.stdout,
 });
 
-// 1----------------------------------------
+
 function renderCell(cell) {
   if (cell === null) {
     return "_";
@@ -14,7 +14,6 @@ function renderCell(cell) {
   }
 }
 
-// 2----------------------------------------
 function renderRow(letter, state) {
   const cells = state[letter];
 
@@ -23,7 +22,6 @@ function renderRow(letter, state) {
   return `${letter} ${row}`;
 }
 
-// 3----------------------------------------
 function renderBoard(state) {
   const letters = Object.keys(state);
 
@@ -34,18 +32,14 @@ function renderBoard(state) {
   return `${header}\n${rows}`;
 }
 
-
-// 4----------------------------------------
 function isNotNull(value) {
   return value !== null;
 }
 
-// 5----------------------------------------
 function flattenArray(arrayOfArray) {
   return arrayOfArray.reduce((newArray, array) => newArray.concat(array), []);
 }
 
-// 6----------------------------------------
 const WINNING_COORDINATES = [
   [
     { letter: "a", digit: "0" },
@@ -89,14 +83,12 @@ const WINNING_COORDINATES = [
   ],
 ];
 
-// 7----------------------------------------
 const state = {
   a: Array(3).fill(null),
   b: Array(3).fill(null),
   c: Array(3).fill(null),
 };
 
-// 8----------------------------------------
 let currentPlayer;
 
 function handleInput(input) {
@@ -121,8 +113,6 @@ function handleInput(input) {
   }
 }
 
-
-// 9----------------------------------------
 function getCoordinate(input) {
   const letter = input[0];
   const digit = input[1] - 1;
@@ -134,16 +124,12 @@ function getCoordinate(input) {
   }
 }
 
-
-// 10----------------------------------------
 function updateState(coordinate) {
   const line = state[coordinate.letter];
 
   line[coordinate.digit] = currentPlayer;
 }
 
-
-// 11----------------------------------------
 function nextPlayer() {
   if (currentPlayer === "X") {
     currentPlayer = "O";
@@ -152,30 +138,23 @@ function nextPlayer() {
   }
 }
 
-
-// 12----------------------------------------
 function playTurn() {
   console.log(renderBoard(state));
   reader.question(`${currentPlayer}: What is your move? e.g: a1\n`, handleInput);
 }
 
-// 13----------------------------------------
 function start() {
   currentPlayer = ["X", "O"][Math.round(Math.random())];
 
   playTurn();
 }
 
-
-// 14----------------------------------------
 function gameIsFinished(state) {
   const allValues = flattenArray(Object.values(state));
 
   return allValues.every(isNotNull);
 }
 
-
-// 15----------------------------------------
 function hasWinner() {
   const isWinningLine = (line) => {
     const pattern = line.map((coordinate) => state[coordinate.letter][coordinate.digit]).join("");
@@ -185,6 +164,5 @@ function hasWinner() {
 
   return WINNING_COORDINATES.some(isWinningLine);
 }
-
 
 start();

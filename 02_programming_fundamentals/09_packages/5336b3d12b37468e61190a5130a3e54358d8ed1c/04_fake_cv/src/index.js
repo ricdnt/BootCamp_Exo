@@ -1,2 +1,2 @@
-const fakeCv = require("./fakeCv");
+const {fakeCv} = require("./fakeCv");
 console.log(fakeCv());
