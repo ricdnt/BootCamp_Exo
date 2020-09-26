@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Let the tests on objects begin ! that ensures that your 'command' object contains at least \`fries: true\` and \`sauce: 'Hannibal' without checking properties one by one: sauce: "Hannibal" fries: true 1`] = `"sauce,Hannibal,fries,true,kebab,Double,soda,Sprite"`;
