@@ -18,6 +18,7 @@ export default {
       },
     },
   ],
+
   screenshots: [
     {
       url:
@@ -72,3 +73,4 @@ export default {
   summary:
     "Step into a world of discovery, exploration and adventure in The Legend of Zelda: Breath of the Wild, a boundary-breaking new game in the acclaimed series. Travel across fields, through forests and to mountain peaks as you discover what has become of the ruined kingdom of Hyrule in this stunning open-air adventure.",
 };
+

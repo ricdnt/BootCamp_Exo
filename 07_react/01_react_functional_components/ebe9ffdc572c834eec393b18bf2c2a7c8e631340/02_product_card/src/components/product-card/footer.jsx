@@ -1,7 +1,7 @@
 import React from "react";
 
 const CardFooter = () => {
-  return <div />;
+  return <div></div>;
 };
 
 export default CardFooter;
